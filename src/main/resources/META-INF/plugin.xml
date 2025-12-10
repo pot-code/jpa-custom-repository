@@ -24,16 +24,23 @@
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <supportsKotlinPluginMode supportsK2="true"/>
+    </extensions>
+
     <extensions defaultExtensionNs="com.intellij">
         <intentionAction>
+            <language>kotlin</language>
             <category>JPA</category>
             <className>io.github.potcode.jpacustomrepository.GenerateEmptyCustomRepository</className>
         </intentionAction>
         <intentionAction>
+            <language>kotlin</language>
             <category>JPA</category>
             <className>io.github.potcode.jpacustomrepository.GenerateBlazeCustomRepository</className>
         </intentionAction>
         <intentionAction>
+            <language>kotlin</language>
             <category>JPA</category>
             <className>io.github.potcode.jpacustomrepository.GenerateBlazeViewCustomRepository</className>
         </intentionAction>

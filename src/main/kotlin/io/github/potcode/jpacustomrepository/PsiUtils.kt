@@ -3,6 +3,13 @@ package io.github.potcode.jpacustomrepository
 import org.jetbrains.kotlin.psi.KtClass
 import org.jetbrains.kotlin.psi.KtPsiFactory
 
+/**
+ * 为目标类追加接口继承
+ *
+ * @param psiFactory KtPsiFactory
+ * @param targetClass 目标类
+ * @param superInterface 接口名称
+ */
 fun appendSuperInterface(psiFactory: KtPsiFactory, targetClass: KtClass, superInterface: String) {
     val superTypeEntryList = targetClass.getSuperTypeList()
     if (superTypeEntryList == null) {

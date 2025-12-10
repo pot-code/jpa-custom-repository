@@ -13,7 +13,7 @@ import org.jetbrains.kotlin.psi.KtPsiFactory
 
 class GenerateBlazeViewCustomRepository : GenerateCustomRepositoryBase() {
     override fun getText(): String {
-        return "Extends blaze EntityView repository"
+        return "Extends blaze entity view repository"
     }
 
     @Throws(IncorrectOperationException::class)
