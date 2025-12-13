@@ -8,7 +8,7 @@ version = "0.1.0"
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
 
@@ -38,9 +38,10 @@ dependencies {
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "252.25557"
+            // 最低兼容 2023.2.8 版本
+            sinceBuild = "232.8"
         }
-        
+
         changeNotes = """
             Initial version with K2 compiler support
         """.trimIndent()
@@ -51,11 +52,12 @@ tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
         sourceCompatibility = "21"
-        targetCompatibility = "21"
+        targetCompatibility = "17"
     }
 
     patchPluginXml {
-        sinceBuild.set("252.25557")
+        // 最低兼容 2023.2.8 版本
+        sinceBuild.set("232.8")
         untilBuild.set("253.*")
     }
 
